@@ -14,17 +14,18 @@ const Axios = () => {
         })
    }
 
-   function post(){
-    axios.post("http://127.0.0.1:5000/",req).then(resp=>{
-        setResData(resp.data)
-    })
-   }
+  //  function post(){
+  //   axios.post("http://127.0.0.1:5000/",req).then(resp=>{
+  //       setResData(resp.data)
+  //   })
+  //  }
 
   return (
     <div>
       <input type="textbox" name="data-inp" placeholder="typehere" onChange={(e)=>{setReqData(e.target.value)}}></input>
-      <button onClick={post}>CLICK!!</button>
-      the response is {res}
+      <button onClick={getReq}>CLICK!!</button>
+      <br></br>
+      The response is {res}
     </div>
   )
 }
